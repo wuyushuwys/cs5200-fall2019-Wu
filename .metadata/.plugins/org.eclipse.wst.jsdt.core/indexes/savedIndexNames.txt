@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/wally/Master/Database Management System/project/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1079583326.index
+1688460197.index
+2702609603.index
+4263126141.index
+719758096.index
+852730631.index

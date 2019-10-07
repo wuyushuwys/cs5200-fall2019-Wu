@@ -1,0 +1,4 @@
+Hostname:cs5200-fall2019-wu.crtzxgcj28vw.us-east-2.rds.amazonaws.com
+username:root
+password:cs5200fall2019
+port:3306

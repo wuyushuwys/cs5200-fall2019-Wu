@@ -14,6 +14,7 @@ CREATE TABLE person(
 `username` varchar(255) default null,
 `password` varchar(255) default null,
 `email` varchar(255) default null,
+`dob` Date default null,
 PRIMARY KEY(id)
 );
 

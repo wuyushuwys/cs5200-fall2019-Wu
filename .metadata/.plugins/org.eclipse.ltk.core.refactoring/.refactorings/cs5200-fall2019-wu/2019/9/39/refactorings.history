@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;cs5200-fall2019-wu&apos;&#x0A;- Original project: &apos;cs5200-fall2019-wu&apos;&#x0A;- Original element: &apos;edu.northeastern.cs5200.HelloController.java&apos;" description="Delete element" element1="/src\/main\/java&lt;edu.northeastern.cs5200{HelloController.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1569295832048" subPackages="false" version="1.0"/>
-</session>

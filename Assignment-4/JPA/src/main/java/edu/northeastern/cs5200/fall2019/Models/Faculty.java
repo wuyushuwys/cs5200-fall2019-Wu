@@ -1,8 +1,6 @@
 package edu.northeastern.cs5200.fall2019.Models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -12,9 +10,9 @@ public class Faculty extends User {
     private String office;
     @Column(name = "IS_TENURED")
     private boolean tenured;
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
     private List<Course> authoredCourses;
-    @OneToMany(mappedBy = "teacher")
+    @OneToMany(mappedBy = "teacher", fetch = FetchType.LAZY)
     private List<Section> taughtSections;
 
     public Faculty() {

@@ -14,13 +14,13 @@ public class Section {
     private int id;
     private String title;
     private int seats;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private Course course;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private Faculty teacher;
-    @ManyToMany(mappedBy = "enrolledSections", fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "enrolledSections", fetch = FetchType.LAZY)
     private List<Student> enrolledStudents;
 
     public Section() {

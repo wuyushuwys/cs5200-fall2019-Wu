@@ -12,7 +12,7 @@ public class Student extends User {
     @OneToMany(mappedBy = "student")
     private List<Answer> studentsAnswers;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "ENROLLMENT",
             joinColumns = @JoinColumn(name = "STUDENT_ID", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "SECTION_ID", referencedColumnName = "ID"))

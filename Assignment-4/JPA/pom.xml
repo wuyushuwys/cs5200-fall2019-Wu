@@ -11,7 +11,7 @@
 	<groupId>edu.northeastern.cs5200</groupId>
 	<artifactId>JPA</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+<!--	<packaging>war</packaging>-->
 	<name>JPA</name>
 	<description>cs5200-fall2019-wu-project</description>
 

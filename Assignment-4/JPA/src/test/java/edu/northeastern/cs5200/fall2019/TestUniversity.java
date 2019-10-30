@@ -10,16 +10,12 @@ import edu.northeastern.cs5200.fall2019.Models.Faculty;
 import edu.northeastern.cs5200.fall2019.Models.Section;
 import edu.northeastern.cs5200.fall2019.Models.Student;
 import org.junit.Test;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.core.annotation.Order;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest
 public class TestUniversity {
     @Autowired

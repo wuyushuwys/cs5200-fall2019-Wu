@@ -16,7 +16,7 @@ public class Course {
     private List<Module> listOfModule;
     @OneToMany(mappedBy = "course")
     private List<Section> listOfSection;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private Faculty author;
 

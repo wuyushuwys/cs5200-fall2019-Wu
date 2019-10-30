@@ -12,3 +12,6 @@
 - MySQL
 ## Assignment-3
 - Implementing JDBC
+## Assignment-4
+- Implementing JPA
+- [Homework webpage](https://docs.google.com/document/d/15meo3oYLKY0Wxoap6ynIM6PV3IpGkb6KNHB2PYZ8YDA/edit?ts=5db667b2#heading=h.sjux8j4l1ibr)

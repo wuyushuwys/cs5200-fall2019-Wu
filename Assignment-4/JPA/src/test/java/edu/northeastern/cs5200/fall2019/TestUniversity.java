@@ -9,14 +9,17 @@ import edu.northeastern.cs5200.fall2019.Models.Course;
 import edu.northeastern.cs5200.fall2019.Models.Faculty;
 import edu.northeastern.cs5200.fall2019.Models.Section;
 import edu.northeastern.cs5200.fall2019.Models.Student;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestUniversity {
     @Autowired
     private UniversityUpdateDao universityUpdateDao;
@@ -25,12 +28,12 @@ public class TestUniversity {
 
 
     @Test
-    public void testTruncateDatabase(){
+    public void test1_TruncateDatabase(){
         universityUpdateDao.truncateDatabase();
     }
 
     @Test
-    public void testCreateFaculty(){
+    public void test2_CreateFaculty(){
         Faculty Alan = new Faculty(null, null, "Alan", "Turin", "123A", true, null, null);
         universityUpdateDao.createFaculty(Alan);
         Faculty Ada = new Faculty(null, null, "Ada", "Lovelace", "123B", true, null, null);
@@ -38,7 +41,7 @@ public class TestUniversity {
     }
 
     @Test
-    public void testCreateStudent(){
+    public void test3_CreateStudent(){
         Student Alice = new Student(null, null, "Alice", "Wonderland", 2020, 12000, null, null);
         universityUpdateDao.createStudent(Alice);
         Student Bob = new Student(null, null, "Bob", "Hope", 2021, 23000, null, null);
@@ -56,7 +59,7 @@ public class TestUniversity {
     }
 
     @Test
-    public void testCreateCourse(){
+    public void test4_CreateCourse(){
         Faculty Alan = universityFinderDao.findFacultyByFirstName("Alan");
         Faculty Ada = universityFinderDao.findFacultyByFirstName("Ada");
         Course CS1234 = new Course("CS1234", null, null, Alan);
@@ -70,7 +73,7 @@ public class TestUniversity {
     }
 
     @Test
-    public void testCreateSection(){
+    public void test5_CreateSection(){
         Course CS1234 = universityFinderDao.findCourseByTitle("CS1234");
         Course CS2345 = universityFinderDao.findCourseByTitle("CS2345");
         Course CS3456 = universityFinderDao.findCourseByTitle("CS3456");
@@ -85,7 +88,7 @@ public class TestUniversity {
     }
 
     @Test
-    public void testEnrollStudentInSection(){
+    public void test6_EnrollStudentInSection(){
         Student Alice = universityFinderDao.findStudentByFirstName("Alice");
         Section SEC4321 = universityFinderDao.findSectionByTitle("SEC4321");
         Section SEC5432 = universityFinderDao.findSectionByTitle("SEC5432");

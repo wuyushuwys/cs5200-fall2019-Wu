@@ -3,11 +3,9 @@ package edu.northeastern.cs5200.fall2019.DAOs;
 import edu.northeastern.cs5200.fall2019.Models.*;
 import edu.northeastern.cs5200.fall2019.Repositoires.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
+
 import org.springframework.stereotype.Repository;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 

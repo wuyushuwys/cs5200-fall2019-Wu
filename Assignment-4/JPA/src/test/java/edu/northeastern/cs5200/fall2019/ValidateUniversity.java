@@ -3,8 +3,10 @@ package edu.northeastern.cs5200.fall2019;
 import edu.northeastern.cs5200.fall2019.DAOs.UniversityFinderDao;
 import edu.northeastern.cs5200.fall2019.DAOs.UniversityUpdateDao;
 import edu.northeastern.cs5200.fall2019.Models.*;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ValidateUniversity {
     @Autowired
     UniversityUpdateDao universityUpdateDao;
@@ -21,37 +24,37 @@ public class ValidateUniversity {
     UniversityFinderDao universityFinderDao;
 
     @Test
-    public void validateUsers(){
+    public void test1_validateUsers(){
         List<User> users = universityFinderDao.findAllUsers();
         System.out.println("The number total of Users is " + users.size());
     }
 
     @Test
-    public void validateFaculties(){
+    public void test2_validateFaculties(){
         List<Faculty> faculties = universityFinderDao.findAllFaculty();
         System.out.println("The number total of Faculties is " + faculties.size());
     }
 
     @Test
-    public void validateStudents(){
+    public void test3_validateStudents(){
         List<Student> students = universityFinderDao.findAllStudents();
         System.out.println("The number total of Students is " + students.size());
     }
 
     @Test
-    public void validateCourses(){
+    public void test4_validateCourses(){
         List<Course> courses = universityFinderDao.findAllCourses();
         System.out.println("The number total of Courses is " + courses.size());
     }
 
     @Test
-    public void validateSections(){
+    public void test4_validateSections(){
         List<Section> sections = universityFinderDao.findAllSections();
         System.out.println("The number total of Sections is " + sections.size());
     }
 
     @Test
-    public void validateCourseAuthorship(){
+    public void test5_validateCourseAuthorship(){
         List<Faculty> authors = universityFinderDao.findAllFaculty();
         for(Faculty author : authors) {
             List<Course> courses = universityFinderDao.findCoursesForAuthor(author);
@@ -64,7 +67,7 @@ public class ValidateUniversity {
     }
 
     @Test
-    public void validateSectionsPerCourse(){
+    public void test6_validateSectionsPerCourse(){
         List<Course> courses = universityFinderDao.findAllCourses();
         for(Course course : courses){
             List<Section> sections = universityFinderDao.findSectionForCourse(course);
@@ -78,7 +81,7 @@ public class ValidateUniversity {
     }
 
     @Test
-    public void validateSectionEnrollments(){
+    public void test7_validateSectionEnrollments(){
         List<Section> sections = universityFinderDao.findAllSections();
         for(Section section : sections){
             List<Student> students = universityFinderDao.findStudentsInSection(section);
@@ -92,7 +95,7 @@ public class ValidateUniversity {
     }
 
     @Test
-    public void validateStudentEnrollments(){
+    public void test8_validateStudentEnrollments(){
         List<Student> students = universityFinderDao.findAllStudents();
         for(Student student : students){
             List<Section> sections = universityFinderDao.findSectionsForStudent(student);
@@ -106,7 +109,7 @@ public class ValidateUniversity {
     }
 
     @Test
-    public void validateSectionSeats(){
+    public void test9_validateSectionSeats(){
         List<Section> sections = universityFinderDao.findAllSections();
         for(Section section : sections){
             if(section.getSeats()==0)

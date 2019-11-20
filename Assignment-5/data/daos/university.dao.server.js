@@ -12,10 +12,10 @@ const trueFalseSchema = require('../models/true-false.schema.server')
 
 
 truncateDatabase = async () => {
-    await studentModel.remove({});
-    await questionModel.remove({});
-    await answerModel.remove({});
-    await quizWidgetModel.remove({});
+    await studentModel.deleteMany({});
+    await questionModel.deleteMany({});
+    await answerModel.deleteMany({});
+    await quizWidgetModel.deleteMany({});
 }
 
 populateDatabase = async () => {
@@ -140,14 +140,13 @@ populateDatabase = async () => {
 
 createStudent = student => studentModel.create(student)
 
-deleteStudent = id => studentModel.remove({_id: id})
+deleteStudent = id => studentModel.deleteOne({_id: id})
 
 createQuestion = question => questionModel.create(question)
 
-deleteQuestion = id => questionModel.remove({_id: id})
+deleteQuestion = id => questionModel.deleteOne({_id: id})
 
 answerQuestion = async (studentId, questionId, answer) => {
-    // const returnjson = data => toJSON(data);
     try{
         let student = await studentModel.findById(studentId)
         let question = await questionModel.findById(questionId)
@@ -172,7 +171,7 @@ answerQuestion = async (studentId, questionId, answer) => {
     }
 }
 
-deleteAnswer = id => answerModel.remove({_id: id})
+deleteAnswer = id => answerModel.deleteOne({_id: id})
 
 findAllStudents = () => studentModel.find()
 

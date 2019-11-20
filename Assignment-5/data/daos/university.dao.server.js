@@ -71,7 +71,7 @@ populateDatabase = async () => {
             points: 10,
             questionType: 'MultipleChoice',
             multipleChoice: {
-                choice: "Java Persistence API,Java Persisted Application,JavaScript Persistence API,JSON Persistent Associations",
+                choices: "Java Persistence API,Java Persisted Application,JavaScript Persistence API,JSON Persistent Associations",
                 correct: 1
             }
         }
@@ -82,7 +82,7 @@ populateDatabase = async () => {
             points: 10,
             questionType: 'MultipleChoice',
             multipleChoice: {
-                choice: "Object Relational Model,Object Relative Markup,Object Reflexive Model,Object Relational Mapping",
+                choices: "Object Relational Model,Object Relative Markup,Object Reflexive Model,Object Relational Mapping",
                 correct: 4
             }
         }
